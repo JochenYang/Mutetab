@@ -31,6 +31,6 @@ export const defaultSettings: Settings = {
   rememberPreference: false,
   shortcuts: {
     muteCurrentTab: 'Ctrl+M',
-    muteAllTabs: 'Ctrl+Alt+M'
+    muteAllTabs: 'Ctrl+Shift+M'
   }
 };
