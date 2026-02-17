@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "MuteTab - 标签页静音",
+  "version": "1.0.0",
+  "description": "快速静音浏览器标签页音频，支持快捷键操作",
+  "icons": {
+    "32": "icon/icon32.png",
+    "48": "icon/icon48.png",
+    "64": "icon/icon64.png",
+    "128": "icon/icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "32": "icon/icon32.png",
+      "48": "icon/icon48.png"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "commands"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "commands": {
+    "mute-current-tab": {
+      "suggested_key": {
+        "default": "Ctrl+M",
+        "mac": "Command+M"
+      },
+      "description": "静音当前标签页"
+    },
+    "mute-all-tabs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "静音所有标签页"
+    }
+  },
+  "options_page": "settings.html"
+}
