@@ -84,18 +84,28 @@ export default function App({ settings }: AppProps) {
         shortcuts={settings.shortcuts}
       />
 
-      {/* Signature */}
-      <div style={{
-        marginTop: 16,
-        textAlign: 'center'
-      }}>
-        <Text style={{
-          fontSize: 12,
-          color: 'var(--color-text-secondary)'
-        }}>
-          Created by Jochen
+      {/* Footer with signature */}
+      <div style={styles.footer}>
+        <Text style={styles.footerText}>
+          Created by <Text strong style={styles.author}>Jochen</Text>
         </Text>
       </div>
     </div>
   );
 }
+
+const styles = {
+  footer: {
+    marginTop: 16,
+    paddingTop: 12,
+    borderTop: '1px solid var(--color-border)',
+    textAlign: 'center' as const,
+  },
+  footerText: {
+    fontSize: 11,
+    color: 'var(--color-text-secondary)',
+  },
+  author: {
+    color: 'var(--color-text)',
+  },
+};

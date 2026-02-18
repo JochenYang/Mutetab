@@ -21,11 +21,39 @@ export default function App({
   const [theme, setTheme] = useState<Settings['theme']>(settings.theme);
   const [rememberPreference, setRememberPreference] = useState(settings.rememberPreference);
   const [saving, setSaving] = useState(false);
+  const [commands, setCommands] = useState<Array<{name?: string; shortcut?: string}>>([]);
 
   useEffect(() => {
     setTheme(settings.theme);
     setRememberPreference(settings.rememberPreference);
   }, [settings]);
+
+  useEffect(() => {
+    // Fetch actual registered shortcuts from Chrome
+    chrome.commands.getAll((cmds) => {
+      setCommands(cmds);
+    });
+  }, []);
+
+  // Get shortcut by command name
+  const getShortcut = (commandName: string): string => {
+    const cmd = commands.find(c => c.name === commandName);
+    return cmd?.shortcut || '';
+  };
+
+  // Parse shortcut string to display format
+  const formatShortcut = (shortcut: string): string[] => {
+    if (!shortcut) return [];
+    return shortcut.split('+').map(key => {
+      const keyMap: Record<string, string> = {
+        'Control': 'Ctrl',
+        'Command': 'Cmd',
+        'Alt': 'Alt',
+        'Shift': 'Shift',
+      };
+      return keyMap[key] || key;
+    });
+  };
 
   const handleThemeChange = (value: Settings['theme']) => {
     setTheme(value);
@@ -107,11 +135,19 @@ export default function App({
           <div style={styles.shortcutInfo}>
             <div style={styles.shortcutRow}>
               <Text style={styles.shortcutLabel}>当前标签页静音</Text>
-              <kbd style={styles.kbd}>Ctrl + M</kbd>
+              {getShortcut('mute-current-tab') ? (
+                <kbd style={styles.kbd}>{formatShortcut(getShortcut('mute-current-tab')).join(' + ')}</kbd>
+              ) : (
+                <Text type="secondary">未设置</Text>
+              )}
             </div>
             <div style={styles.shortcutRow}>
               <Text style={styles.shortcutLabel}>全部标签页静音</Text>
-              <Text type="secondary">需手动设置</Text>
+              {getShortcut('mute-all-tabs') ? (
+                <kbd style={styles.kbd}>{formatShortcut(getShortcut('mute-all-tabs')).join(' + ')}</kbd>
+              ) : (
+                <Text type="secondary">未设置</Text>
+              )}
             </div>
           </div>
 
