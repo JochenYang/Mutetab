@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button, Space, Typography, Divider } from 'antd';
-import { SoundOutlined, SettingOutlined } from '@ant-design/icons';
+import { SoundOutlined, SettingOutlined, CopyrightOutlined } from '@ant-design/icons';
 import MuteButton from './components/MuteButton';
 import ShortcutHint from './components/ShortcutHint';
 import { Settings } from '../types';
@@ -86,9 +86,8 @@ export default function App({ settings }: AppProps) {
 
       {/* Footer with signature */}
       <div style={styles.footer}>
-        <Text style={styles.footerText}>
-          Created by <Text strong style={styles.author}>Jochen</Text>
-        </Text>
+        <CopyrightOutlined style={styles.footerIcon} />
+        <Text style={styles.footerText}>2026 Jochen</Text>
       </div>
     </div>
   );
@@ -100,12 +99,17 @@ const styles = {
     paddingTop: 12,
     borderTop: '1px solid var(--color-border)',
     textAlign: 'center' as const,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+  },
+  footerIcon: {
+    fontSize: 12,
+    color: 'var(--color-text-secondary)',
   },
   footerText: {
     fontSize: 11,
     color: 'var(--color-text-secondary)',
-  },
-  author: {
-    color: 'var(--color-text)',
   },
 };
