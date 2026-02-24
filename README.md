@@ -2,8 +2,6 @@
 
 <div align="center">
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-✓-green?style=flat-square)]()
-[![Edge Add-ons](https://img.shields.io/badge/Edge-Add--ons-✓-green?style=flat-square)]()
 [![MIT License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)]()
 [![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat-square)]()
 
