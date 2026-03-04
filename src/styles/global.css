@@ -23,19 +23,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* Enhanced cursor feedback */
-button,
-[role="button"],
-a,
-.ant-card {
-  cursor: pointer;
-}
-
-/* Ant Design theme overrides - Professional Blue */
+/* Ant Design theme overrides */
 .ant-btn-primary {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
-  transition: all var(--transition-normal) !important;
 }
 
 .ant-btn-primary:hover {
@@ -43,16 +34,8 @@ a,
   border-color: var(--color-primary-hover) !important;
 }
 
-.ant-btn-primary:active {
-  transform: scale(0.98);
-}
-
 .ant-switch-checked {
   background-color: var(--color-primary) !important;
-}
-
-.ant-switch {
-  transition: background-color var(--transition-normal) !important;
 }
 
 .ant-radio-button-wrapper-checked {
@@ -61,20 +44,10 @@ a,
   color: #ffffff !important;
 }
 
-.ant-radio-button-wrapper {
-  transition: all var(--transition-normal) !important;
-}
-
 .ant-card {
   background-color: var(--color-card);
   border-color: var(--color-border);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal) !important;
-}
-
-.ant-card:hover {
-  box-shadow: var(--shadow-md);
 }
 
 .ant-card-head {
@@ -89,12 +62,10 @@ a,
   background-color: var(--color-card);
   border-color: var(--color-border);
   color: var(--color-text);
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal) !important;
 }
 
 .ant-input:focus, .ant-input:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-primary-light) !important;
 }
 
 /* Typography colors */
@@ -104,21 +75,4 @@ a,
 
 .text-secondary {
   color: var(--color-text-secondary);
-}
-
-/* Smooth focus states for accessibility */
-*:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }

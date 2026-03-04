@@ -1,30 +1,26 @@
 /* CSS Variables for theming */
 
 :root {
-  /* Light mode colors - Professional Blue theme */
-  --color-primary: #3B82F6;
-  --color-primary-hover: #2563EB;
-  --color-primary-light: #DBEAFE;
-  --color-bg: #F8FAFC;
+  /* Light mode colors */
+  --color-primary: #0D9488;
+  --color-primary-hover: #0F766E;
+  --color-bg: #FAFAF9;
   --color-card: #FFFFFF;
-  --color-text: #1E293B;
-  --color-text-secondary: #64748B;
-  --color-border: #E2E8F0;
-  --color-success: #10B981;
+  --color-text: #18181B;
+  --color-text-secondary: #71717A;
+  --color-border: #E4E4E7;
+  --color-success: #22C55E;
   --color-warning: #F59E0B;
-  --color-danger: #EF4444;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-primary: 0 4px 14px 0 rgba(59, 130, 246, 0.35);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
   /* Border radius */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-full: 9999px;
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -33,20 +29,17 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: #60A5FA;
-  --color-primary-hover: #3B82F6;
-  --color-primary-light: #1E3A5F;
-  --color-bg: #0F172A;
-  --color-card: #1E293B;
-  --color-text: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-border: #334155;
-  --color-success: #34D399;
+  --color-primary: #14B8A6;
+  --color-primary-hover: #2DD4BF;
+  --color-bg: #18181B;
+  --color-card: #27272A;
+  --color-text: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-border: #3F3F46;
+  --color-success: #4ADE80;
   --color-warning: #FBBF24;
-  --color-danger: #F87171;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
-  --shadow-primary: 0 4px 14px 0 rgba(96, 165, 250, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }

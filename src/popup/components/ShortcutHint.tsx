@@ -6,7 +6,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Typography } from 'antd';
-import { KeyOutlined, SettingOutlined } from '@ant-design/icons';
+import { KeyOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
@@ -128,9 +128,8 @@ export default function ShortcutHint(_props: ShortcutHintProps) {
       </div>
 
       <div style={styles.hint}>
-        <SettingOutlined style={{ marginRight: 4, fontSize: 11 }} />
         <Text style={styles.hintText}>
-          点击右上角设置 → 快捷键设置
+          点击右上角 ⚙️ 设置 → 快捷键设置
         </Text>
       </div>
     </div>
@@ -155,11 +154,10 @@ const styles: Record<string, React.CSSProperties> = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 12px',
+    padding: '8px 12px',
     backgroundColor: 'var(--color-card)',
     borderRadius: 'var(--radius-sm)',
     border: '1px solid var(--color-border)',
-    transition: 'all var(--transition-normal)',
   },
   shortcutLabel: {
     color: 'var(--color-text)',
@@ -201,10 +199,6 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: 'var(--radius-sm)',
     border: '1px dashed var(--color-border)',
     textAlign: 'center' as const,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 4,
   },
   hintText: {
     fontSize: 11,
@@ -213,6 +207,5 @@ const styles: Record<string, React.CSSProperties> = {
   notConfigured: {
     fontSize: 12,
     color: 'var(--color-text-secondary)',
-    fontStyle: 'italic',
   },
 };
