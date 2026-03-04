@@ -103,6 +103,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     gap: 4,
+    transition: 'border-color var(--transition-normal)',
   },
   footerIcon: {
     fontSize: 12,

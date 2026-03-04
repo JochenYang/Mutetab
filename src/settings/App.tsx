@@ -230,6 +230,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: 16,
     backgroundColor: 'var(--color-card)',
     borderRadius: 'var(--radius-md)',
+    transition: 'box-shadow var(--transition-normal), border-color var(--transition-normal)',
   },
   cardHeader: {
     display: 'flex',
@@ -254,6 +255,7 @@ const styles: Record<string, React.CSSProperties> = {
     flex: 1,
     textAlign: 'center',
     minWidth: 80,
+    transition: 'all var(--transition-normal)',
   },
   cardHint: {
     marginTop: 12,
@@ -285,6 +287,7 @@ const styles: Record<string, React.CSSProperties> = {
     backgroundColor: 'var(--color-bg)',
     border: '1px solid var(--color-border)',
     borderRadius: 'var(--radius-sm)',
+    boxShadow: 'var(--shadow-sm)',
   },
   linkContainer: {
     marginTop: 8,
@@ -294,6 +297,7 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: 'pointer',
     display: 'block',
     marginTop: 4,
+    transition: 'color var(--transition-normal)',
   },
   preferenceItem: {
     display: 'flex',
@@ -315,10 +319,12 @@ const styles: Record<string, React.CSSProperties> = {
   saveButton: {
     minWidth: 160,
     height: 44,
+    transition: 'all var(--transition-normal)',
   },
   divider: {
     borderColor: 'var(--color-border)',
     margin: '24px 0',
+    transition: 'border-color var(--transition-normal)',
   },
   footer: {
     textAlign: 'center',
